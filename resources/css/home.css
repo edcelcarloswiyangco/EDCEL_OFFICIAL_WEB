@@ -1,0 +1,24 @@
+*{
+    padding: 0%;
+    margin: 0%;
+   
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    padding: 10px;
+}
+section{
+  
+    border: 2px solid black;
+
+}
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: lightblue;
+}
