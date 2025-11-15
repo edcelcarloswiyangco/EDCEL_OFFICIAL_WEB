@@ -44,7 +44,7 @@
                     <a href="#projects" class="cta-button">View My Work</a>
                 </div>
                 <div class="hero-image-container">
-                    <img src="https://placehold.co/400x400/00f0ff/111111?text=Edcel" alt="A placeholder photo of Edcel Carlos Wiyangco" class="hero-image">
+                    <img src="{{ asset('images/edcel-hero.jpg') }}" alt="A placeholder photo of Edcel Carlos Wiyangco" class="hero-image">
                 </div>
             </div>
         </section>
@@ -55,7 +55,7 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
                     <div class="about-image-container">
-                         <img src="https://placehold.co/350x450/333333/FFFFFF?text=My+Photo" alt="A professional photo of Edcel" class="about-image">
+                         <img src="{{ asset('images/edcel2-hero.jpg') }}" alt="A professional photo of Edcel" class="about-image">
                     </div>
                     <div class="about-text">
                         <h3>Hello there!</h3>
@@ -110,7 +110,7 @@
                             </p>
                             <div class="resume-download">
                                 <!-- Make sure to replace '/path/to/your-cv.pdf' with the actual link to your CV file -->
-                                <a href="/path/to/your-cv.pdf" class="cta-button" download="Edcel-Wiyangco-Resume.pdf">Download CV</a>
+                                <a href="{{ asset('cv/Edcel-Wiyangco-Resume.pdf') }}" class="cta-button" download="Edcel-Wiyangco-Resume.pdf">Download CV</a>
                             </div>
                         </div>
 
@@ -139,7 +139,7 @@
                                 </div>
                                 <button class="cta-button cert-button" 
                                         data-title="CCNAv7: Introduction to Networks"
-                                        data-img="/images/certs/ccna_cert.png"
+                                        data-img="{{ asset('images/certs/ccna.png') }}"
                                         data-desc="Certificate awarded for successfully completing the CCNAv7: Introduction to Networks course from Cisco Networking Academy (2024), CCA.">
                                     View
                                 </button>
@@ -153,7 +153,7 @@
                                 </div>
                                 <button class="cta-button cert-button" 
                                         data-title="Certificate of Leadership (NSTP & CWTS)"
-                                        data-img="/images/certs/nstp_leadership.png"
+                                        data-img="{{ asset('images/certs/nstp.png') }}"
                                         data-desc="Awarded for outstanding abilities and leadership skills during NSTP and CWTS (2023-2024), CCA.">
                                     View
                                 </button>
@@ -167,7 +167,7 @@
                                 </div>
                                 <button class="cta-button cert-button" 
                                         data-title="13th LCUAA National Games - Participation"
-                                        data-img="/images/certs/lcuaa_games.png"
+                                        data-img="{{ asset('images/certs/lcuaa_games.png') }}"
                                         data-desc="Certification of Participation - 13th LCUAA National Games (2024), MUNTILUPA. Theme: 'Moving Stronger Together, Reaching Farther and Higher'">
                                     View
                                 </button>
@@ -181,7 +181,7 @@
                                 </div>
                                 <button class="cta-button cert-button" 
                                         data-title="IT Essentials"
-                                        data-img="/images/certs/it_essentials.png"
+                                        data-img="{{ asset('images/certs/it essentials.png') }}"
                                         data-desc="IT Essentials - Cisco Networking Academy (2023), CCA. Topics: PC hardware, operating systems, networking basics, security, troubleshooting.">
                                     View
                                 </button>
