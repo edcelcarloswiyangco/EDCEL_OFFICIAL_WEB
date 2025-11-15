@@ -383,7 +383,7 @@
                         <span class="social-icon">
                             <i class="fa-brands fa-instagram"></i>
                         </span>
-                        <span class="social-text">Instagram</span>
+                        <span class="social-text">Instagram.</span>
                     </a>
                 </div>
 
