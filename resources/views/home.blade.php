@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edcel's Portfolio</title>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     @vite(['resources/css/app.css', 'resources/css/home.css', 'resources/js/app.js'])
 </head>
 
@@ -271,7 +273,7 @@
                     <!-- Project Card 1 -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://placehold.co/600x400/00f0ff/111111?text=Project+1" alt="Placeholder for Project 1">
+                            <img src="{{ asset('images/projects/ecommerce-platform.png') }}" alt="Screenshot of E-Commerce Platform">
                         </div>
                         <div class="project-info">
                             <h3 class="project-title">E-Commerce Platform</h3>
@@ -294,7 +296,7 @@
                     <!-- Project Card 2 -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://placehold.co/600x400/00c3ff/111111?text=Project+2" alt="Placeholder for Project 2">
+                            <img src="{{ asset('images/projects/blog.jpg') }}" alt="Screenshot of Blog & CMS">
                         </div>
                         <div class="project-info">
                             <h3 class="project-title">Blog & CMS</h3>
@@ -316,7 +318,7 @@
                     <!-- Project Card 3 -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://placehold.co/600x400/00a2d4/111111?text=Project+3" alt="Placeholder for Project 3">
+                            <img src="{{ asset('images/projects/Task Management API.jpg') }}" alt="Screenshot of Task Management API">
                         </div>
                         <div class="project-info">
                             <h3 class="project-title">Task Management API</h3>
@@ -345,22 +347,46 @@
                 <h2 class="section-title">Get In Touch</h2>
                 <p class="contact-subtitle">I'm currently available for new opportunities and collaborations. Whether you have a project in mind or just want to say hi, feel free to reach out!</p>
                 
-                <a href="mailto:edcelcarloswiyangco@gmail.com" class="cta-button">Say Hello</a>
+                
+
 
                 <div class="contact-socials">
-                    <a href="https://github.com/your-username" class="social-link" target="_blank" rel="noopener noreferrer">
-                        <span class="social-icon">[Gh]</span>
+                    <a href="https://github.com/edcelcarloswiyangco" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </span>
                         <span class="social-text">GitHub</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/Vanity URL name" class="social-link" target="_blank" rel="noopener noreferrer">
-                        <span class="social-icon">[Li]</span>
+                    
+                    <a href="https://www.linkedin.com/in/edcelcw/" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </span>
                         <span class="social-text">LinkedIn</span>
                     </a>
-                    <a href="https://twitter.com/your-username" class="social-link" target="_blank" rel="noopener noreferrer">
-                        <span class="social-icon">[Tw]</span>
+                    
+                    <a href="https://twitter.com/EdcelWiyangco" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </span>
                         <span class="social-text">Twitter</span>
                     </a>
+
+                    <a href="https://www.facebook.com/EdcelCW" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                        <span class="social-text">Facebook</span>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/edcelcw/" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                        <span class="social-text">Instagram</span>
+                    </a>
                 </div>
+
             </div>
         </section>
     </main>
