@@ -1,8 +1,8 @@
-@include('componets.header')
+@include('components.header')
 <p>Email</p>
-{!! Form::text('email')!!}
+<input type="text" name="email">
 <p>password</p>
-{!! Form::text('password')!!}
+<input type="password" name="password">
 
 
 @include('components.footer')
