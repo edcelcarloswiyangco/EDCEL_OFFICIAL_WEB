@@ -1,16 +1,15 @@
-@include('componets.header')
-@if($errors->any())
-    <div style="color:red"></div>
-    @foreach ($errors->all() as $error )
-    <p>[{$error}]</p>
-        
-    @endforeach
+@include('components.header')
+    @if($errors->any())
+        <div style="color:red">
+            @foreach ($errors->all() as $error )
+                <p>[{{$error}}]</p>   
+            @endforeach
+        </div>
+    @endif
 
 
-<form method="POST" action="{{route('register')}}">
+<form action="{{route('login.form')}}" method="POST" >
     @csrf
-    <p>Name</p>
-    <input name ="name" type="text" required>
     <p>Email</p>
     <input type="email" name="email" required>
     <p>password</p>
