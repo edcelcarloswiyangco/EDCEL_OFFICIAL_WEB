@@ -8,10 +8,12 @@
     @endif
 
 
+
 <form action="{{route('login.form')}}" method="POST" >
     @csrf
     <p>Email</p>
     <input type="email" name="email" required>
+   
     <p>password</p>
     <input type="password" name="password"required>
     <input type="submit">

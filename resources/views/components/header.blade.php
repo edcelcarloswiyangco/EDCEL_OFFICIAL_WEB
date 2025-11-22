@@ -7,4 +7,7 @@
     
 </head>
 <body>
+    <div style="width:100%; background-color: lightblue;">
+        <h1>EDCEL OFFICIAL WEB</h1>
+    </div>
 
