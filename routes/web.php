@@ -22,7 +22,6 @@ route::get('login',[AuthController::class,'showLogin'])->name('login.form');
 route::post('login',[AuthController::class,'login'])->name('login.form');
 
 
-route::post('home',[AuthController::class,'login'])->name('loginhome.form');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 // In web.php
 Route::post('/login-submit', [AuthController::class, 'login'])->name('loginhome.form');
