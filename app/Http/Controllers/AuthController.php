@@ -43,6 +43,20 @@ class AuthController extends Controller
             'email'=> 'invalid email/password'
         ]);
     }
+
+        // Inside App\Http\Controllers\AuthController
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        
+        // Invalidate the session for security
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        // Redirect to Home page
+        return redirect('/');
+    }
 }
 
 

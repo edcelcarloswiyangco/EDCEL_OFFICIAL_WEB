@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\PostingController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
@@ -33,3 +33,25 @@ Route::get('/admin/login', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+
+
+
+Route::middleware('auth')->group(function () {
+    
+    Route::get('/dashboard', function () {
+        return view('/admin/dashboard');
+    })->name('dashboard');
+
+    // Add this line:
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+
+
+
+//newwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+route ::get('/dashboard/create',[PostingController::class,'create'])->name('create.index');
+route ::post('/dashboard',[PostingController::class,'store'])->name('create.store');
