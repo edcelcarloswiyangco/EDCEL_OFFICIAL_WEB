@@ -11,6 +11,7 @@ class Posting extends Model
     protected $fillable = [
         'title',
         'content',
+        'year',
     ];
     
 

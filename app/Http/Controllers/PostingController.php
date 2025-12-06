@@ -20,6 +20,6 @@ class PostingController extends Controller
         ]);
         
         $newPost = Posting::create($data);
-        return redirect(route('create.index'))->with('success', 'Post created successfully!');
+        return redirect()->route('dashboard')->with('success', 'Post created successfully!');
     }
 }
