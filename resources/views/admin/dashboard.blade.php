@@ -21,8 +21,13 @@
                 <th>Content</th>
                 <th>Year</th>
             </tr>
-            
-            
+            @foreach ($postings as $posting)
+                <tr>
+                    <td>{{ $posting->title }}</td>
+                    <td>{{ $posting->content }}</td>
+                    <td>{{ $posting->year }}</td>
+                </tr>
+            @endforeach
         </table>
     </div>
     

@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class PostingController extends Controller
 {
+    public function index()
+    {
+        $postings = Posting::all();
+        return view('admin.dashboard', compact('postings'));
+    }
     
     public function create()
     {
@@ -16,7 +21,7 @@ class PostingController extends Controller
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
-            'year' => 'required|integer',
+            'year' => 'required|integer|max:2100',
         ]);
         
         $newPost = Posting::create($data);
