@@ -15,17 +15,35 @@
     </form>
     <H1>postings</H1>
     <div>
+        @if (session('status'))
+            <div style="color: green;">
+                {{ session('status') }}
+            </div>
+        @endif
+    </div>
+    <div>
         <table border="1">
             <tr>
+                <th>ID</th>
                 <th>Title</th>
                 <th>Content</th>
                 <th>Year</th>
+                <th>edit</th>
+                <th>delete</th>
             </tr>
             @foreach ($postings as $posting)
                 <tr>
+                    <td>{{ $posting->id }}</td>
                     <td>{{ $posting->title }}</td>
                     <td>{{ $posting->content }}</td>
                     <td>{{ $posting->year }}</td>
+                    <td><a href="{{ route('create.edit',['post' => $posting]) }}">Edit</a></td>
+                    <td>
+                        <form method="POST" action="{{ route('create.destroy',['post' => $posting]) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirm('Are you sure you want to delete this posting?');">Delete</button>
+                        </form>
                 </tr>
             @endforeach
         </table>

@@ -53,3 +53,6 @@ Route::middleware('auth')->group(function () {
 
 route ::get('/dashboard/create',[PostingController::class,'create'])->name('create.index');
 route ::post('/dashboard',[PostingController::class,'store'])->name('create.store');
+route ::get('/dashboard/{post}',[PostingController::class,'edit'])->name('create.edit');
+route ::put('/dashboard/{post}',[PostingController::class,'update'])->name('create.update'); 
+route ::delete('/dashboard/{post}',[PostingController::class,'destroy'])->name('create.destroy');
