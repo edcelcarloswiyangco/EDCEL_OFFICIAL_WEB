@@ -12,7 +12,8 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 #});
 
 Route::get('/', function () {
-    return view('home');
+    $postings = \App\Models\Posting::orderBy('created_at', 'desc')->get();
+    return view('home', compact('postings'));
 });
 
 route::get('register',[AuthController::class,'showRegister'])->name('register.form');

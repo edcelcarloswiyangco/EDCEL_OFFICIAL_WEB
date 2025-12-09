@@ -12,6 +12,7 @@ class Posting extends Model
         'title',
         'content',
         'year',
+        'image',
     ];
     
 

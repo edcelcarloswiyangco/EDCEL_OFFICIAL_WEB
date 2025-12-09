@@ -22,7 +22,13 @@ class PostingController extends Controller
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'year' => 'required|integer|max:2100',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+        
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('postings', 'public');
+            $data['image'] = $imagePath;
+        }
         
         $newPost = Posting::create($data);
         return redirect()->route('dashboard')->with('success', 'Post created successfully!');
@@ -39,7 +45,13 @@ class PostingController extends Controller
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'year' => 'required|integer',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('postings', 'public');
+            $data['image'] = $imagePath;
+        }
 
         $post->update($data);
 

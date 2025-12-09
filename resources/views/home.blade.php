@@ -227,69 +227,35 @@
         <section class="projects" id="projects">
             <div class="container">
                 <h2 class="section-title">My Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="{{ asset('images/projects/ecommerce-platform.png') }}" alt="E-Commerce Platform" onerror="this.src='https://placehold.co/600x400/1a1a1a/00f0ff?text=E-Commerce';">
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">E-Commerce Platform</h3>
-                            <p class="project-description">A full-featured e-commerce platform with product management, shopping cart, and payment integration.</p>
-                            <div class="project-stack">
-                                <ul class="stack-list">
-                                    <li>Laravel</li>
-                                    <li>Vue.js</li>
-                                    <li>MySQL</li>
-                                    <li>Stripe API</li>
-                                </ul>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link" target="_blank">Live Demo</a>
-                                <a href="#" class="project-link" target="_blank">GitHub</a>
-                            </div>
-                        </div>
+                @if($postings->isEmpty())
+                    <div style="text-align: center; padding: 3rem; color: #c0c0c0;">
+                        <i class="fa-solid fa-inbox" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                        <p style="font-size: 1.1rem;">No projects yet.</p>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="{{ asset('images/projects/blog.jpg') }}" alt="Blog & CMS" onerror="this.src='https://placehold.co/600x400/1a1a1a/00f0ff?text=CMS+Blog';">
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Blog & CMS</h3>
-                            <p class="project-description">A custom-built blog and content management system with user roles, permissions, and a Markdown editor.</p>
-                            <div class="project-stack">
-                                <ul class="stack-list">
-                                    <li>Laravel</li>
-                                    <li>Livewire</li>
-                                    <li>Tailwind CSS</li>
-                                </ul>
+                @else
+                    <div class="projects-grid">
+                        @foreach($postings as $posting)
+                            <div class="project-card">
+                                <div class="project-image">
+                                    @if($posting->image)
+                                        <img src="{{ asset('storage/' . $posting->image) }}" alt="{{ $posting->title }}" onerror="this.src='https://placehold.co/600x400/1a1a1a/00f0ff?text=Project+Image';">
+                                    @else
+                                        <img src="https://placehold.co/600x400/1a1a1a/00f0ff?text={{ urlencode($posting->title) }}" alt="{{ $posting->title }}">
+                                    @endif
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">{{ $posting->title }}</h3>
+                                    <p class="project-description">{{ Str::limit($posting->content, 150) }}</p>
+                                    <div class="project-stack">
+                                        <ul class="stack-list">
+                                            <li>{{ $posting->year }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link" target="_blank">Live Demo</a>
-                                <a href="#" class="project-link" target="_blank">GitHub</a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="{{ asset('images/projects/Task Management API.jpg') }}" alt="Task Management API" onerror="this.src='https://placehold.co/600x400/1a1a1a/00f0ff?text=API+Project';">
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Task Management API</h3>
-                            <p class="project-description">A RESTful API for a to-do application, featuring JWT authentication, resource controllers, and API documentation.</p>
-                            <div class="project-stack">
-                                <ul class="stack-list">
-                                    <li>Laravel</li>
-                                    <li>Sanctum</li>
-                                    <li>Postman</li>
-                                </ul>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link" target="_blank">View Docs</a>
-                                <a href="#" class="project-link" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endif
             </div>
         </section>
 
