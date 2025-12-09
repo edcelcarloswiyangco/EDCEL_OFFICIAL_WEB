@@ -65,4 +65,4 @@ To run this project on your local machine, please follow these steps:
 * **Repository:** [EDCEL_OFFICIAL_WEB](https://github.com/edcelcarloswiyangco/EDCEL_OFFICIAL_WEB)
 
 ---
-*This project is for educational purposes as a requirement for [Insert Subject Code/Name Here].*
+*This project is for educational purposes as a requirement for [WEB DEV 2  2025 3rd year 1st sem].*
